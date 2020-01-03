@@ -68,7 +68,7 @@ export default {
       this.$http.get("http://vue.studyit.io/api/getlunbo").then(result => {
         console.log("promise::::" + Promise);
         if (result.ok === "false") {
-          Toast({                                                 
+          Toast({
             message: "加载轮播图失败",
             position: "middle",
             duration: 1200

@@ -1,15 +1,20 @@
-import $ from 'jquery'
 import './css/index.css'
 import 'bootstrap/dist/css/bootstrap.css'
-import Vue from "../node_modules/vue/dist/vue.js"
 import 'mint-ui/lib/style.css'
-import { Button, Header, Swipe, SwipeItem } from 'mint-ui'
+import {
+   Button,
+   Header,
+   Swipe,
+   SwipeItem
+} from 'mint-ui'
 import './lib/mui/css/mui.css'
 import './lib/mui/css/icons-extra.css'
-import app from "./App.vue"
-import router from "./router.js"
+import Vue from "../node_modules/vue/dist/vue.js"
 import VueRouter from "vue-router"
 import VueResource from "vue-resource"
+import router from "./router.js"
+import app from "./App.vue"
+
 
 Vue.component(Button.name, Button)
 Vue.component(Header.name, Header)
@@ -20,8 +25,7 @@ Vue.use(VueResource)
 
 var vm = new Vue({
    el: "#app",
-   data: {
-   },
+   data: {},
    render: function (createElement) {
       return createElement(app)
    },
