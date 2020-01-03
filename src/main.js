@@ -14,7 +14,7 @@ import VueRouter from "vue-router"
 import VueResource from "vue-resource"
 import router from "./router.js"
 import app from "./App.vue"
-
+import moment from 'moment'
 
 Vue.component(Button.name, Button)
 Vue.component(Header.name, Header)
@@ -23,6 +23,9 @@ Vue.component(SwipeItem.name, SwipeItem)
 Vue.use(VueRouter)
 Vue.use(VueResource)
 
+Vue.filter('dateFormat', function (dateStr, pattern = 'YYYY-MM-DD HH:mm:ss') {
+   return moment(dateStr).format(pattern)
+})
 var vm = new Vue({
    el: "#app",
    data: {},
